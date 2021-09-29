@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --pastel: #E2C2B9;
+    --white: #EFEFEF;
+    --green: #BFD8B8;
+    --red: rgb(189, 47, 47);
+    --font-family: 'Nunito', sans-serif;
+    --padding-x: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+.navbar {
+    height: 70px;
+    background-color: var(--pastel);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 100%;
+    max-width: 150px;
+    min-width: 65px;
+    max-height: 50px;
+}
+
+.menu {
+    height: 100%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.menu ul li {
+    margin: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.menu ul li:hover {
+    border-bottom: 1px solid var(--white);
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu__mobile {
+    display: none;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.hero__section {
+    height: calc(100vh - 70px);
+    background-color: var(--green);
+    background-image: url(./assets/levis.jpg);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero__section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+    opacity: 0.4;
+    mix-blend-mode: color-burn;
+}
+
+.hero__section * {
+    z-index: 1;
+    position: relative;
+}
+
+.hero__section-text h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 200;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+.hero__section-text h1 span {
+    display: block;
+    font-weight: 1000;
+    color: var(--red);
+}
+
+.hero__section-more {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero__section-more p {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 1000;
+    color: var(--pastel);
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.about__section {
+    padding: 100px var(--padding-x);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-size: 35px;
+    font-weight: 500px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.redtitle {
+    color: var(--red);
+}
+
+.section__title span {
+    font-weight: 500;
+}
+
+.about__section p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.beneficios__section {
+    padding: 100px var(--padding-x);
+    background-image: url(./assets/background-benefits.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.beneficios__section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    opacity: 0.2;
+}
+
+.beneficios__section * {
+    position: relative;
+    z-index: 100;
+}
+
+.beneficios__cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 225px));
+    gap: 10%;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.beneficios__card-grid {
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 200px auto;
+    padding: 35px;
+    gap: 15px;
+    box-shadow: 7px 5px 5px #7b7b7b2e;
+}
+
+.beneficios__card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.beneficios__card-grid img {
+    width: 100%;
+    height: 100%;
+    max-height: 170px;
+    max-width: 170px;
+    border-radius: 15px;
+}
+
+.benefecios__card-text {
+    font-size: 10px;
+    text-align: center;
+}
+
+.benefecios__card-text h2 {
+    font-weight: 400;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.contact__section {
+    background-color: var(--green);
+    padding: 100px var(--padding-x);
+}
+
+.contact__formContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 50px;
+}
+
+.contact__formContainer-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__formContainer-img img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.contact__formContainer-form {
+    display: flex;
+}
+
+.contact__formContainer-form .form__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.contact__formContainer-form .form__item label {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact__formContainer-form .form__item input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    outline: none;
+    width: 100%;
+}
+
+.contact__formContainer-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact__formContainer form button {
+    width: 40%;
+    align-items: center;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 17px;
+    text-transform: uppercase;    
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.contact__formContainer form button:hover {
+    font-weight: 800;
+    background-color: var(--pastel);
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1235px) {
+    :root {
+        --padding-x: 20px;
+    }
+    .beneficios__cardContainer {
+        gap: 3%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contact__formContainer form button {
+        background-color: wheat;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu__mobile {
+        display: block;
+    }
+    .hero__section-text h1 {
+        font-size: 2.5em;
+    }
+    .contact__formContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 411px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 360px) {
+
+}

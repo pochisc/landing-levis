@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Levis</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="logo">
+            </div>
+        </a>
+        
+
+        <div class="menu">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Beneficios</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="menu__mobile">
+            <div class="hamburger not-active" id="hamburger_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero__section">
+        <div class="hero__section-text">
+            <h1>Bienvenidos a <span>Levis</span></h1>
+        </div>
+        <div class="hero__section-more">
+            <p>Ver mas</p>
+        </div>
+    </section>
+
+    <section class="about__section">
+        <div class="container">
+            <h2 class="section__title redtitle"><span>Quienes</span> somos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugiat quas at. Quibusdam ducimus quidem ratione laborum consectetur, esse magni labore eos odit omnis, magnam necessitatibus placeat quam provident repellendus?</p>
+        </div>
+    </section>
+
+    <section class="beneficios__section">
+        <div class="container">
+            <h2 class="section__title redtitle"><span>Beneficios</span</h2>
+            
+            <div class="beneficios__cardContainer">
+                <article class="beneficios__card-grid">
+                    <div class="benefecios__card-img">
+                        <img src="./assets/all.png" alt="">
+                    </div>
+                    <div class="benefecios__card-text">
+                        <h2>For all ages</h2>
+                    </div>
+                </article>
+
+                <article class="beneficios__card-grid">
+                    <div class="benefecios__card-img">
+                        <img src="./assets/comfort.png" alt="">
+                    </div>
+                    <div class="benefecios__card-text">
+                        <h2>Comfortable</h2>
+                    </div>
+                </article>
+
+                <article class="beneficios__card-grid">
+                    <div class="benefecios__card-img">
+                        <img src="./assets/diversity.png" alt="">
+                    </div>
+                    <div class="benefecios__card-text">
+                        <h2>Diversity</h2>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact__section">
+        <div class="container">
+            <h2 class="section__title">
+                Sumate al <span>#teamlevis</span>
+            </h2>
+
+            <div class="contact__formContainer">
+                <div class="contact__formContainer-img">
+                    <img src="./assets/heart.png" alt="">
+                </div>
+                <div class="contact__formContainer-form">
+                    <form action="">
+                        <div class="form__item">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form__item">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="form__item">
+                            <label for="telefono">Telefono</label>
+                            <input type="text" name="telefono" id="telefono">
+                        </div>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
